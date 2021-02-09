@@ -5,10 +5,21 @@ class TaskController {
     Task.findAll({
       order: [
         ['id', 'DESC']
-      ]
+      ],
+      include: 'User'
     })
       .then(data => {
-        res.status(200).json(data)
+        const output = []
+        data.forEach(element => {
+          output.push({
+            id: element.id,
+            title: element.title,
+            category: element.category,
+            UserID: element.UserID,
+            username: element.User.email
+          })
+        })
+        res.status(200).json(output)
       })
       .catch(err => {
         next(err)
