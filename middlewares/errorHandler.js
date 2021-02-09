@@ -36,6 +36,11 @@ const errorHandler = (err, req, res, next) => {
           message: 'Data not found'
         })
         break;
+      case 'SequelizeDatabaseError':
+        res.status(400).json({
+          message: 'Database error'
+        })
+      break;
       default:
         res.status(500).json({
           message: 'Internal Server Error'

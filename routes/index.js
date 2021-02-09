@@ -4,6 +4,10 @@ const TaskController = require('../controllers/taskController')
 const authentication = require('../middlewares/authentication')
 const authorize = require('../middlewares/authorization')
 
+router.get('/', (req, res, next) => {
+  res.send('Server kanban online')
+})
+
 // User routing
 router.post('/register', UserController.register)
 router.post('/login', UserController.login)

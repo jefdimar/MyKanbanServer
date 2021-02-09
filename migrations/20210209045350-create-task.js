@@ -9,10 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       category: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       UserID: {
         type: Sequelize.INTEGER,
@@ -21,7 +23,8 @@ module.exports = {
           key: 'id'
         },
         onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
+        onUpdate: 'CASCADE',
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
