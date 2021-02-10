@@ -50,9 +50,9 @@ class UserController {
               email: user.email
             }
 
-            const accessToken = generateToken(payload)
+            const access_token = generateToken(payload)
 
-            res.status(200).json({ accessToken })
+            res.status(200).json({ access_token })
           } else {
             next({
               name: 'Username / Password wrong'
