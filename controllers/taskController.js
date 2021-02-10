@@ -67,7 +67,7 @@ class TaskController {
 
     const input = {
       title: req.body.title,
-      category: req.body.category
+      category: req.body.category.toLowerCase()
     }
 
     Task.update(input, {
