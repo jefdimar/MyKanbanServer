@@ -64,7 +64,7 @@ class UserController {
         next(err)
       })
   }
-
+// this is google login
   static googleLogin(req, res, next) {
     const id_token = req.body.id_token
     const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID)
