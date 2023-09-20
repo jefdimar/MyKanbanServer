@@ -15,7 +15,7 @@ class TaskController {
             id: element.id,
             title: element.title,
             category: element.category,
-            UserID: element.UserID,
+            userID: element.userID,
             username: element.User.email
           })
         })
@@ -30,7 +30,7 @@ class TaskController {
     const input = {
       title: req.body.title,
       category: req.body.category,
-      UserID: req.user.id
+      userID: req.user.id
     }
 
     Task.create(input)
