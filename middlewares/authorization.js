@@ -11,7 +11,7 @@ function authorize(req, res, next) {
         next({
           name: 'Data not found'
         })
-      } else if (data.UserID !== req.user.id) {
+      } else if (data.userID !== req.user.id) {
         next({
           name: 'Not authorized'
         })
