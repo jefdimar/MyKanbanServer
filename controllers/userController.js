@@ -17,7 +17,7 @@ class UserController {
           id: user.id,
           email: user.email
         }
-
+        console.log(data)
         res.status(201).json(data)
       })
       .catch(err => {
